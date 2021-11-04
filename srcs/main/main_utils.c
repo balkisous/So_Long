@@ -12,7 +12,7 @@
 
 #include "../../lib/so_long.h"
 
-int open_fd(int fd, char **argv)
+int	open_fd(int fd, char **argv)
 {
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
@@ -20,10 +20,10 @@ int open_fd(int fd, char **argv)
 	return (fd);
 }
 
-int ft_len_malloc(t_param *p)
+int	ft_len_malloc(t_param *p)
 {
-    p->map = NULL;
-    p->map = (char **)malloc(sizeof(char *) * (p->nb_of_lines + 1));
+	p->map = NULL;
+	p->map = (char **)malloc(sizeof(char *) * (p->nb_of_lines + 1));
 	if (!p->map)
 	{
 		printf("map existe pas\n");
@@ -32,20 +32,20 @@ int ft_len_malloc(t_param *p)
 	return (1);
 }
 
-void    read_file(int fd, t_param *p)
+void	read_file(int fd, t_param *p)
 {
-    char    *line;
-    int     i;
+	char	*line;
+	int		i;
 
-    line = NULL;
-    i = 0;
-    p->nb_of_lines = 0;
+	line = NULL;
+	i = 0;
+	p->nb_of_lines = 0;
 	while (1)
-    {
-    	line = get_next_line(fd, p, true);
+	{
+		line = get_next_line(fd, p, true);
 		if (!line || !line[0])
 		{
-        	free(line);
+			free(line);
 			line = NULL;
 			break ;
 		}
@@ -53,32 +53,32 @@ void    read_file(int fd, t_param *p)
 		i++;
 	}
 	secure_line(line);
-    close(fd);
+	close(fd);
 }
 
 void	store_map(t_param *p, int fd)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < p->nb_of_lines)
+	{
+		p->map[i] = get_next_line(fd, p, false);
+		if (p->map[i][0] == ' ' || p->map[i][0] == '\n' || !p->map[i][0])
 		{
-			p->map[i] = get_next_line(fd, p, false);
-			if (p->map[i][0] == ' ' || p->map[i][0] == '\n' || !p->map[i][0])
-			{
-				free(p->map[i]);
-				p->map[i] = NULL;
-				break ;
-			}
-			if (!p->map[i])
-			{
-				free(p->map[i]);
-				break ;
-			}
-			i++;
+			free(p->map[i]);
+			p->map[i] = NULL;
+			break ;
 		}
-		p->map[i] = NULL;
-		close(fd);
+		if (!p->map[i])
+		{
+			free(p->map[i]);
+			break ;
+		}
+		i++;
+	}
+	p->map[i] = NULL;
+	close(fd);
 }
 
 void	secure_line(char *line)

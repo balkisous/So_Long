@@ -92,11 +92,10 @@ int	main(int argc, char **argv)
 			return (0);
 		read_file(fd, &p);
 		if (ft_len_malloc(&p) == 0)
-			return(0);
+			return (0);
 		fd = open_fd(fd, argv);
 		if (fd < 0)
 			return (0);
-		//Lecture pour sauvegarder les lignes
 		store_map(&p, fd);
 		if (p.map && ft_parsing(p.map, &p))
 		{
