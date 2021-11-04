@@ -103,11 +103,7 @@ int	main(int argc, char **argv)
 			return (0);
 		}
 		else
-		{
-			printf("Error\n");
-			free_map(p.map);
-			return (-1);
-		}
+			return (message_error(&p));
 		free_map(p.map);
 	}
 	return (0);

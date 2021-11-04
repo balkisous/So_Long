@@ -113,8 +113,11 @@ int	ft_size_tab(char **map);
 int	is_one(char *str, char c);
 int check_one(char **map, t_param *p);
 
-/////parsing_map.c
+/////parsing_utils.c
 void	ft_init(t_param *p, char **map);
+int		message_error(t_param *p);
+
+/////parsing_map.c
 int		ft_parsing(char **map, t_param *p);
 int		ft_strlen(char *str);
 int		ft_size_map(char **map);
