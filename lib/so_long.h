@@ -151,6 +151,9 @@ void	ft_free(char **map);
 int		open_fd(int fd, char **argv);
 void    read_file(int fd, t_param *p);
 int		ft_len_malloc(t_param *p);
+void	store_map(t_param *p, int fd);
+void	secure_line(char *line);
+
 
 //////mlx_utils.c
 int			create_trgb(int t, int r, int g, int b);

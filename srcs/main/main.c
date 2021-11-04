@@ -83,59 +83,22 @@ void	free_map(char **map)
 int	main(int argc, char **argv)
 {
 	int		fd;
-	int		i;
-	int		curs;
 	t_param	p;
 
 	if (ft_parse_arg(argc, argv))
 	{
-		curs = 0;
-		i = 0;
-		fd = open(argv[1], O_RDONLY);
+		fd = open_fd(fd, argv);
 		if (fd < 0)
-		{
-			printf("Error\n");
 			return (0);
-		} ////->fonction
 		read_file(fd, &p);
-		////////aloue **map
-		fd = ft_len_malloc(&p);
-		printf("fd vaut %d\n", fd);
-		if (fd == 0)
-		{
-			printf("fd malloc de %d\n", fd);
+		if (ft_len_malloc(&p) == 0)
 			return(0);
-		}
-		/*map = (char **)malloc(sizeof(char *) * (p.nb_of_lines + 1));
-		if (!map)
-			return (0);*/
-		fd = open(argv[1], O_RDONLY);
+		fd = open_fd(fd, argv);
 		if (fd < 0)
-		{
-			printf("Error\n");
 			return (0);
-		}
 		//Lecture pour sauvegarder les lignes
-		while (i < p.nb_of_lines)
-		{
-			p.map[i] = get_next_line(fd, &p, false);
-			if (p.map[i][0] == ' ' || p.map[i][0] == '\n' || !p.map[i][0])
-			{
-				free(p.map[i]);
-				p.map[i] = NULL;
-				break ;
-			}
-			if (!p.map[i])
-			{
-				free(p.map[i]);
-				break ;
-			}
-			i++;
-		}
-		p.map[i] = NULL;
-		close(fd);
-		i = 0;
-		if (p.map[i] && ft_parsing(p.map, &p))
+		store_map(&p, fd);
+		if (p.map && ft_parsing(p.map, &p))
 		{
 			ft_window(p.map, p.size_x, p.size_y, p.c);
 			return (0);

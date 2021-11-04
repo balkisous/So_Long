@@ -14,11 +14,10 @@
 
 int open_fd(int fd, char **argv)
 {
-    fd = open(argv[1], O_RDONLY);
+	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
-	    printf("Error\n");
-    printf("fd = %d\n", fd);
-    return (fd);
+		printf("Error\n");
+	return (fd);
 }
 
 int ft_len_malloc(t_param *p)
@@ -50,17 +49,43 @@ void    read_file(int fd, t_param *p)
 			line = NULL;
 			break ;
 		}
-		if (line)
-		{
-			free(line);
-			line = NULL;
-		}
+		secure_line(line);
 		i++;
 	}
+	secure_line(line);
+    close(fd);
+}
+
+void	store_map(t_param *p, int fd)
+{
+	int i;
+
+	i = 0;
+	while (i < p->nb_of_lines)
+		{
+			p->map[i] = get_next_line(fd, p, false);
+			if (p->map[i][0] == ' ' || p->map[i][0] == '\n' || !p->map[i][0])
+			{
+				free(p->map[i]);
+				p->map[i] = NULL;
+				break ;
+			}
+			if (!p->map[i])
+			{
+				free(p->map[i]);
+				break ;
+			}
+			i++;
+		}
+		p->map[i] = NULL;
+		close(fd);
+}
+
+void	secure_line(char *line)
+{
 	if (line)
 	{
 		free(line);
 		line = NULL;
 	}
-    close(fd);
 }
