@@ -12,22 +12,6 @@
 
 #include "../../lib/so_long.h"
 
-void	ft_free(char **map)
-{
-	int	i;
-	int	curs;
-
-	i = 0;
-	curs = 0;
-	while (curs < 5)
-	{
-		free(map[i]);
-		curs++;
-		i++;
-	}
-	free(map);
-}
-
 int	ft_strlen(char *s)
 {
 	int	i;
@@ -78,6 +62,13 @@ void	free_map(char **map)
 	}
 	free(map);
 	map = NULL;
+}
+
+int	message_error(t_param *p)
+{
+	printf("Error\n");
+	free_map(p->map);
+	return (-1);
 }
 
 int	main(int argc, char **argv)

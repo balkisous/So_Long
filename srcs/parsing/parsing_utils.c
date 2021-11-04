@@ -20,10 +20,3 @@ void	ft_init(t_param *p, char **map)
 	p->size_x = ft_strlen(map[0]);
 	p->size_y = ft_size_tab(map);
 }
-
-int	message_error(t_param *p)
-{
-	printf("Error\n");
-	free_map(p->map);
-	return (-1);
-}

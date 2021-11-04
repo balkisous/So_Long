@@ -111,7 +111,7 @@ int	ft_parsing(char **map, t_param *p)
 	if (check_size_tab(map, p))
 	{
 		if (!check_one(map, p))
-			return (0);		
+			return (0);
 		if (!check_char(map))
 			return (0);
 		if (!ft_count(map, p))

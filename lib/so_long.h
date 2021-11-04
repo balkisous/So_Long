@@ -148,7 +148,10 @@ void	init_col(int *x, int *y, int *i, int *j);
 
 
 //////main.c
-void	ft_free(char **map);
+int		ft_strlen(char *s);
+char	*ft_strdup(char *s);
+void	free_map(char **map);
+
 
 //////main_utils.c
 int		open_fd(int fd, char **argv);
@@ -161,7 +164,6 @@ void	secure_line(char *line);
 //////mlx_utils.c
 int			create_trgb(int t, int r, int g, int b);
 int			show_image(t_env *env);
-//int			press_key(int keypress, t_env *env);
 void		my_mlx_pixel_put(t_img *img, int x, int y, int color);
 int			release_key(int keypress, t_env *env);
 
@@ -182,7 +184,5 @@ void			load_all_images(t_env *env);
 int		quit_game(t_env *env);
 void	destroy_all_images(t_env *env);
 void	destroy_image(t_env *env, t_img *img);
-
-void	free_map(char **map);
 
 # endif
