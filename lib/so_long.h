@@ -3,45 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:00:51 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/05 12:33:07 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/05 13:30:53 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef SO_LONG_H
+#ifndef SO_LONG_H
 # define SO_LONG_H
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
-#include <sys/uio.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include "../mlx/mlx.h"
-#include <stdbool.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <sys/types.h>
+# include <sys/uio.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include "../mlx/mlx.h"
+# include <stdbool.h>
 
 # define KEY_ESC 65307
-/*
-# define KEY_W 119	//up
-# define KEY_A 97	//left
-# define KEY_S 115	//down
-# define KEY_D 100	//right
-*/
+# define KEY_W 119
+# define KEY_A 97
+# define KEY_S 115
+# define KEY_D 100
+# define KEY_W 65362
+# define KEY_A 65361
+# define KEY_S 65364
+# define KEY_D 65363
 
-# define KEY_W 65362	//up
-# define KEY_A 65361	//left
-# define KEY_S 65364	//down
-# define KEY_D 65363	//right
-
-typedef struct	s_prms
+typedef struct s_prms
 {
-	void *mlx;
-	void *mlx_win;
+	void	*mlx;
+	void	*mlx_win;
 }				t_prms;
 
-typedef struct	s_pos
+typedef struct s_pos
 {
 	int	pos_x;
 	int	pos_y;
@@ -50,7 +47,7 @@ typedef struct	s_pos
 typedef struct s_img
 {
 	void	*img;
-	char 	*addr;
+	char	*addr;
 	int		bppi;
 	int		line;
 	int		endian;
@@ -86,7 +83,7 @@ typedef struct s_env
 	t_pos		p_move;
 }				t_env;
 
-typedef struct	s_param
+typedef struct s_param
 {
 	int		c;
 	int		e;
@@ -153,4 +150,4 @@ int				quit_game(t_env *env);
 void			destroy_all_images(t_env *env);
 void			destroy_image(t_env *env, t_img *img);
 
-# endif
+#endif
