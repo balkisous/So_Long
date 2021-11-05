@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mlx_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 16:44:31 by user42            #+#    #+#             */
-/*   Updated: 2021/11/03 16:02:22 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/05 13:39:37 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,10 @@ int	release_key(int keypress, t_env *env)
 {
 	if (keypress == KEY_ESC)
 		quit_game(env);
-	else if (keypress == KEY_D || keypress == KEY_S
-		|| keypress == KEY_A || keypress == KEY_W)
+	else if (keypress == KEY_D || keypress == KEY_S \
+		|| keypress == KEY_A || keypress == KEY_W \
+		||keypress == KEY_RI || keypress == KEY_DO \
+		|| keypress == KEY_LE || keypress == KEY_UP)
 	{
 		env->key = keypress;
 		if (prev_move(keypress, env))
@@ -48,13 +50,13 @@ int	show_image(t_env *env)
 
 int	prev_move(int keypress, t_env *env)
 {
-	if (keypress == KEY_D)
+	if (keypress == KEY_D || keypress == KEY_RI)
 		return (is_wall(env, 1, 'x'));
-	if (keypress == KEY_S)
+	if (keypress == KEY_S || keypress == KEY_DO)
 		return (is_wall(env, 1, 'y'));
-	if (keypress == KEY_A)
+	if (keypress == KEY_A || keypress == KEY_LE)
 		return (is_wall(env, -1, 'x'));
-	if (keypress == KEY_W)
+	if (keypress == KEY_W || keypress == KEY_UP)
 		return (is_wall(env, -1, 'y'));
 	return (0);
 }

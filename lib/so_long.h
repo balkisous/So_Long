@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:00:51 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/05 13:30:53 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/05 13:34:48 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@
 # define KEY_A 97
 # define KEY_S 115
 # define KEY_D 100
-# define KEY_W 65362
-# define KEY_A 65361
-# define KEY_S 65364
-# define KEY_D 65363
+# define KEY_UP 65362
+# define KEY_LE 65361
+# define KEY_DO 65364
+# define KEY_RI 65363
 
 typedef struct s_prms
 {
