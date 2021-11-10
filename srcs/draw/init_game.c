@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 14:40:04 by user42@stud       #+#    #+#             */
-/*   Updated: 2021/11/03 12:22:48 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/10 11:25:21 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	move_player(t_env *env)
 	if (env->map[env->player.pos_y][env->player.pos_x] == 'E'\
 	&& !env->count_col)
 	{
-		printf("You sucess! Goodbye!\n");
+		printf("You win! Goodbye!\n");
 		quit_game(env);
 	}
 	printf("step %d\n", env->step);

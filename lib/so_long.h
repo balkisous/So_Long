@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:00:51 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/05 13:34:48 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/10 11:47:54 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,5 +149,6 @@ void			init_col(int *x, int *y, int *i, int *j);
 int				quit_game(t_env *env);
 void			destroy_all_images(t_env *env);
 void			destroy_image(t_env *env, t_img *img);
+int				ft_name(char *str);
 
 #endif
