@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 12:19:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/11 21:44:12 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/11 21:57:59 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,6 @@ int	main(int argc, char **argv)
 		}
 		else
 			return (message_error(&p));
-		free_map(p.map);
 	}
 	return (0);
 }
