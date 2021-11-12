@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
+/*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 12:19:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/11 21:57:59 by user42           ###   ########.fr       */
+/*   Updated: 2021/11/12 14:33:48 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,6 @@ int	message_error(t_param *p)
 int	main(int argc, char **argv)
 {
 	int		fd;
-	char	buf[1];
 	t_param	p;
 
 	if (ft_parse_arg(argc, argv))
@@ -82,11 +81,6 @@ int	main(int argc, char **argv)
 		fd = open_fd(fd, argv);
 		if (fd < 0)
 			return (0);
-		if (read(fd, buf, 1) <= 0)
-		{
-			printf("Error\n");
-			return (0);
-		}
 		read_file(fd, &p);
 		if (ft_len_malloc(&p) == 0)
 			return (0);
