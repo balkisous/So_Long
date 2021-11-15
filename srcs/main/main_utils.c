@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:49:47 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/12 14:34:38 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:40:55 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ int	open_fd(int fd, char **argv)
 	fd = open(argv[1], O_RDONLY);
 	if (fd < 0)
 		printf("Error\n");
-	else if (read(fd, buf, 1) <= 0)
-	{
-		printf("Error\n");
-		return (-1);
-	}
 	return (fd);
 }
 

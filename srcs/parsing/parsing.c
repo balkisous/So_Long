@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 17:05:24 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/10 11:47:24 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:21:30 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_pars_name(char *str)
 
 	i = ft_strclen(str, '\0') - 4;
 	y = 0;
+	if (i < 0)
+		return (0);
 	find = ".ber";
 	if (str[i + 1] == 'b')
 	{
