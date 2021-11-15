@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:09:41 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/10 11:46:58 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:11:05 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,10 @@ int	ft_name(char *str)
 			return (0);
 	}
 	return (1);
+}
+
+void	ft_line(t_param *p)
+{
+	if (p->nb_of_lines < 3)
+		printf("Error\n");
 }

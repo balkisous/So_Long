@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:00:51 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/10 11:47:54 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 12:09:10 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,5 +150,6 @@ int				quit_game(t_env *env);
 void			destroy_all_images(t_env *env);
 void			destroy_image(t_env *env, t_img *img);
 int				ft_name(char *str);
+void			ft_line(t_param *p);
 
 #endif
