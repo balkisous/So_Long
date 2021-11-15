@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 12:19:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/15 11:42:22 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:45:47 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,6 @@ int	main(int argc, char **argv)
 		if (fd < 0)
 			return (0);
 		store_map(&p, fd);
-		printf("ici\n");
 		if (p.map && ft_parsing(p.map, &p))
 		{
 			ft_window(p.map, p.size_x, p.size_y, p.c);
