@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 14:24:52 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/15 11:42:31 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:46:14 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	check_size_tab(char **map, t_param *p)
 			}
 			break ;
 		}
+		else if (i == (p->size_y - 1))
+			return (ft_return(map, i, p));
 		else if (ft_strlen(map[i]) != p->size_x)
 			return (0);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 17:05:24 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/15 11:21:30 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 17:08:08 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,15 @@ int	ft_pars_name(char *str)
 	if (i < 0)
 		return (0);
 	find = ".ber";
-	if (str[i + 1] == 'b')
+	while (str[i])
 	{
-		while (str[i])
-		{
-			if (str[i++] == find[y])
-				y++;
-			else
-				return (0);
-		}
-		return (1);
+		if (str[i] == find[y] || (str[i] + 32) == find[y])
+			y++;
+		else
+			return (0);
+		i++;
 	}
-	return (ft_name(str));
+	return (1);
 }
 
 int	ft_parse_arg(int argc, char **argv)

@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 11:31:24 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/04 11:34:12 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 17:01:13 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,10 @@ char	*ft_strjoin(char *s1, char *s2)
 	size = ft_strclen(s1, '\0') + ft_strclen(s2, '\0') + 1;
 	ret = malloc(sizeof(char) * size);
 	if (!ret)
+	{
+		free(s1);
 		return (NULL);
+	}
 	ret = copy(s1, &i, ret);
 	while (s2[y])
 	{

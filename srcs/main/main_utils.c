@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:49:47 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/15 12:05:40 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:57:28 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,18 +66,22 @@ void	store_map(t_param *p, int fd)
 	while (i < p->nb_of_lines)
 	{
 		p->map[i] = get_next_line(fd, p, false);
-		if (p->map[i][0] == ' ' || p->map[i][0] == '\n' || !p->map[i][0])
+		if (p->map[i])
 		{
-			free(p->map[i]);
-			p->map[i] = NULL;
-			break ;
+			if (p->map[i][0] == ' ' || p->map[i][0] == '\n' || !p->map[i][0])
+			{
+				free_error(p, i);
+				break ;
+			}
+			if (!p->map[i])
+			{
+				free_error(p, i);
+				break ;
+			}
+			i++;
 		}
-		if (!p->map[i])
-		{
-			free(p->map[i]);
+		else
 			break ;
-		}
-		i++;
 	}
 	p->map[i] = NULL;
 	close(fd);

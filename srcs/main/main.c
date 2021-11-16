@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 12:19:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/15 12:10:17 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/15 16:40:15 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int	main(int argc, char **argv)
 			return (0);
 		fd = open_fd(fd, argv);
 		ft_line(&p);
-		if (fd < 0 || p.nb_of_lines < 3)
+		if (fd < 0 || p.nb_of_lines <= 3)
 			return (0);
 		store_map(&p, fd);
 		if (p.map && ft_parsing(p.map, &p))
