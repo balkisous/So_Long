@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 11:00:51 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/20 15:02:22 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/20 15:26:15 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,6 +153,5 @@ void			ft_line(t_param *p);
 int				ft_return(char **map, int i, t_param *p);
 void			free_error(t_param *p, int i);
 int				check_n(char **map);
-
 
 #endif
