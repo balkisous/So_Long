@@ -6,7 +6,7 @@
 #    By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/20 15:25:05 by bben-yaa          #+#    #+#              #
-#    Updated: 2021/11/15 16:45:24 by bben-yaa         ###   ########.fr        #
+#    Updated: 2021/11/20 15:10:44 by bben-yaa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ SO_LONG	= so_long
 OBJ		= $(SRCS:.c=.o)
 RM		= rm -rf
 CC		= gcc
-FLAGS	= -Wall -Werror -Wextra -g3 -fsanitize=address
+FLAGS	= -Wall -Werror -Wextra
 
 .c .o:
 		$(CC) $(FLAGS) -Imlx -Lmlx -lmlx -O3 -c $< -o $@ 

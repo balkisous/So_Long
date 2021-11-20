@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:09:41 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/20 13:02:19 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/20 15:12:51 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,26 @@ void	free_error(t_param *p, int i)
 {
 	free(p->map[i]);
 	p->map[i] = NULL;
+}
+
+int	check_n(char **map)
+{
+	int	i;
+
+	i = 0;
+	while (map[i])
+	{
+		if (map[i][0] == '\n')
+		{
+			while (map[i])
+			{
+				if (map[i][0] != '\n')
+					return (0);
+				i++;
+			}
+			return (1);
+		}
+		i++;
+	}
+	return (1);
 }
