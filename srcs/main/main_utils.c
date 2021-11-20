@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:49:47 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/15 16:57:28 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:20:13 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_len_malloc(t_param *p)
 	p->map = (char **)malloc(sizeof(char *) * (p->nb_of_lines + 1));
 	if (!p->map)
 	{
-		printf("map existe pas\n");
+		printf("Error, map existe pas\n");
 		return (0);
 	}
 	return (1);
