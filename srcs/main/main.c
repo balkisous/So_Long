@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 12:19:45 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/15 16:40:15 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/20 13:02:04 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	main(int argc, char **argv)
 	if (ft_parse_arg(argc, argv))
 	{
 		fd = open_fd(fd, argv);
-		if (fd < 0 )
+		if (fd < 0)
 			return (0);
 		read_file(fd, &p);
 		if (ft_len_malloc(&p) == 0)

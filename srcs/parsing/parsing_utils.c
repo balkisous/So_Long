@@ -6,7 +6,7 @@
 /*   By: bben-yaa <bben-yaa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:09:41 by bben-yaa          #+#    #+#             */
-/*   Updated: 2021/11/20 13:00:17 by bben-yaa         ###   ########.fr       */
+/*   Updated: 2021/11/20 13:02:19 by bben-yaa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void	ft_line(t_param *p)
 
 int	ft_return(char **map, int i, t_param *p)
 {
-	if (ft_strlen(map[i]) == p->size_x && map[p->size_y - 1][p->size_x - 1] == '\n')
+	if (ft_strlen(map[i]) == p->size_x \
+		&& map[p->size_y - 1][p->size_x - 1] == '\n')
 		return (1);
 	else if (ft_strlen(map[i]) == (p->size_x - 1))
 		return (1);
