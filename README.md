@@ -1,6 +1,5 @@
 # so_long
 
-#This project's objectives are similar to all first year's objectives: Rigor,
-#use of C, use of basic algorithms, information research etc.
-#As a graphic design project, so_long will enable you to improve your skills
-#in these areas: windows, colors, events, textures, etc.
+Projet d’un petit jeu en 2D à l’aide de la minilibX (librairie graphique de l’école). Le but du joueur est de collecter tous les items présents sur la carte, puis de s’échapper en empruntant la sortie.
+
+J'ai beaucoup apprécié implémenter et coder la logique du jeu + aficher mes premier pixels et texture eait un vrai plaisir! 🤩
