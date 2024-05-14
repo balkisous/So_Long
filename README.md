@@ -41,4 +41,4 @@ Names of contributors :
 * Made at 42Paris 
 
 ## Subject 📝
-You will find the subjet in the repo
+You will find the subject in the repo
