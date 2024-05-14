@@ -30,7 +30,7 @@ I really enjoyed implementing and coding the logic of the game + displaying my f
 * Choose map you want in map folder
 
 ## Help 🛟
-Maybe there some problem to run the minilibx librairie, check it on the github 
+Maybe there some problem to run the minilibx library, check it on the github 
     L-> https://github.com/42Paris/minilibx-linux 
     
 ## Authors 👩‍💻
