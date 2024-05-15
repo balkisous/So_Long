@@ -35,7 +35,7 @@ Maybe there some problem to run the minilibx library, check it on the github
     
 ## Authors 👩‍💻
 Names of contributors :
-@balkisous
+* @balkisous
 
 ## Version history ✅
 * Made at 42Paris 
