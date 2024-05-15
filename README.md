@@ -1,5 +1,5 @@
 # So_Long 👾
-Mini Game in 2D 
+Mini Game in 2D.
 
 ## Description 🔍
 My first graphics project which consists of implementing a 2D game using minilibX (42 graphics library). The player's goal is to collect all the items on the map, then escape using the exit. Coded in C, I appreciated finding a good way to stock all the variable in many struct and use it for the implementation.
