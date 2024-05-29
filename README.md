@@ -29,6 +29,11 @@ I really enjoyed implementing and coding the logic of the game + displaying my f
   ```
 * Choose map you want in map folder
 
+
+## Expected view
+[Screencast from 05-29-2024 01:23:04 PM.webm](https://github.com/balkisous/So_Long/assets/76943138/867f2a1a-9ae6-4467-bae2-d52a0603e5c8)
+
+
 ## Help 🛟
 Maybe there are some problems to run the minilibx library, check it on the github 
     L-> https://github.com/42Paris/minilibx-linux 
