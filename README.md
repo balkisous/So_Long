@@ -24,7 +24,7 @@ I really enjoyed implementing and coding the logic of the game + displaying my f
   ```
 * Change directory and make to compile
   ```
-  ~ cd so_long && make
+  ~ cd So_Long && make
   ~ ./so_long map/maptriforce.ber
   ```
 * Choose map you want in map folder
